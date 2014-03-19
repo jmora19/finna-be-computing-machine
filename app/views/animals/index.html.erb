@@ -1,0 +1,17 @@
+<div class="jumbotron">
+  <h1>Baby Animals!</h1>
+  <p>For the tough times in life</p>
+  <p><a class="btn btn-primary btn-lg" role="button" href="<%=new_animal_path %>"> New Picture</a></p>
+</div>
+<div class="container">
+  <div class="row">
+  <div class="col-md-6">
+<%@animals.each do |animal| %>
+<div class="panel panel-default">
+  <div class="panel heading"><%=animal.title %></div>
+  <div class="panel body">
+    <a href="animals/<%=animal.id%>"> <img src="<%=animal.image_url %>" height="300px" width="300px"> </a>
+  </div>
+      <div class="panel-footer"><%=animal.tags %></div>
+    <% end %>
+<br>
