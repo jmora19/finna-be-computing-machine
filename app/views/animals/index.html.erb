@@ -8,10 +8,10 @@
   <div class="col-md-6">
 <%@animals.each do |animal| %>
 <div class="panel panel-default">
-  <div class="panel heading"><%=animal.title %></div>
+  <font size="6"><%=animal.title %></font>
   <div class="panel body">
-    <a href="animals/<%=animal.id%>"> <img src="<%=animal.image_url %>" height="300px" width="300px"> </a>
+    <a href="animals/<%=animal.id%>"> <IMG HEIGHT="400" WIDTH="450" SRC="<%=animal.image_url %>"></a>
   </div>
-      <div class="panel-footer"><%=animal.tags %></div>
+  <font size="3"><%=animal.tags%></font>
     <% end %>
 <br>
